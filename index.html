@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ayat Portfilo</title>
+    <link href="Style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a25e404d5b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"> AYAT</a>
+        <ul>
+            <li> <a href="#" class="active">Home</a></li>
+            <li> <a href="#sec">about</a></li>
+            <li> <a href="#W">work </a></li>
+            <li> <a href="#f">contacts</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id=text> Ayat Portfolio</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+
+    </section>
+   
+    <div class="container">
+        <div class="row">
+            <div class=col_text id ="sec">
+                <h2 id ="sec"> Frontend Developer</h2>
+                <p>Hi, My Name Is Ayat ,I am a constantly learning, exploring and experimenting web developer. Open to
+                    new ideas and innovative solutions of problems.<br><br> </p>
+                <p>Interested in the entire frontend spectrum as well as explore and learn UI/UX world. Would like to
+                    work on promising projects with positive people and improve myself.</p>
+            </div>
+            <div class=col>
+                <div class="card">
+                    <img src="images/img-preview.png" style=" border-radius: 20%; border: 7px solid rgb(255, 254, 254); margin-top: 40px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 id ="W">My Work</h1>
+    <div class ="work">
+      
+      <div><img src="images/1.jpg" ></div>
+      <div><img src="images/2.png" ></div>
+      <div><img src="images/3.png" ></div>  
+      <div><img src="images/5.jpg" ></div>
+    </div>
+    <footer>
+        <h1 id="f">CONTACT US</h1>
+        <div class ="social">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-codepen"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+    </footer>
+       <script>
+        let stars =document.getElementById('stars');
+        let moon =document.getElementById('moon');
+        let mountains_behind=document.getElementById('mountains_behind');
+        let text =document.getElementById('text');
+        let btn =document.getElementById('btn');
+        let mountains_front=document.getElementById('mountains_front');
+        let header=document.querySelector('header');
+        window.addEventListener('scroll',function(){
+       let value = window.scrollY;
+       stars.style.left=value* 0.25 +'px';
+       moon.style.top=value* 1.25+'px';
+       mountains_behind.style.top=value* 0.5+'px';
+       mountains_front.style.top=value* 0+'px';
+       text.style.marginRight=value*4+'px';
+       text.style.marginTop=value*1.5+'px';
+       btn.style.marginTop=value*1.5+'px';
+       header.style.top=value* 0.5+'px';
+
+        })
+   
+       </script>
+   
+</body>
+
+</html>
